@@ -1,0 +1,201 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #87CEEB;
+    padding: 15px 0;
+    color: white;
+}
+
+.nav-container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Container Styles */
+.container {
+    width: 95%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+    margin: 30px 0;
+}
+
+.progress-bar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    list-style: none;
+    position: relative;
+}
+
+.progress-bar ul::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    z-index: 1;
+}
+
+.progress-bar li {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.progress-bar li span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 5px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+.progress-bar li.active span {
+    background-color: #87CEEB;
+    border-color: #87CEEB;
+    color: white;
+}
+
+.progress-bar li.current span {
+    background-color: #87CEEB;
+    border-color: #87CEEB;
+    color: white;
+}
+
+.progress-bar li p {
+    color: #666;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Form Container */
+.form-container {
+    padding: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+}
+
+label span {
+    color: red;
+    margin-left: 2px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+/* Section Headers */
+h2 {
+    color: #333;
+    font-size: 18px;
+    margin: 25px 0 15px;
+    padding-left: 10px;
+    border-left: 4px solid #87CEEB;
+}
+
+/* Checkbox Container */
+.checkbox-container {
+    margin: 15px 0;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 8px;
+    width: auto;
+    height: auto;
+}
+
+/* Button Styles */
+.btn {
+    padding: 8px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 3px;
+    background-color: #87CEEB;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #5fb3d9;
+}
+
+/* Form Actions */
+.form-actions {
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* Verification Summary */
+.verification-summary {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+    .form-container > div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .checkbox-container,
+    .verification-summary,
+    .form-actions {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .form-container > div {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
